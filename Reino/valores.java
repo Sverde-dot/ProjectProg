@@ -11,7 +11,7 @@ package Reino;
  */
 public class valores {
     public int Pueblo=50;
-    public int Recursos=100;
+    public int Recursos=50;
     public int Dinero=50;
     public int Ejercito=50;
 
@@ -52,8 +52,10 @@ public class valores {
 
     @Override
     public String toString() {
-        System.out.println("Mi lord el reino esta de esta manera " + "Pueblo=" + Pueblo + "Recursos=" + Recursos + "Dinero=" + Dinero + "Ejercito=" + Ejercito);
+        System.out.println("Mi lord el reino esta de esta manera " + " Pueblo= " + Pueblo + " Recursos= " + Recursos + " Dinero= " + Dinero + " Ejercito= " + Ejercito);
         return null;
     }
+    
+   
        
 }

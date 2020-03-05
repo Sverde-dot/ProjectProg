@@ -1,18 +1,23 @@
 
 package Interfaz;
-
+import Reino.*;
 /**
  *
  * @author Yo
  */
 public class menu extends javax.swing.JFrame {
 
+    int Pueblo=100;
+    int Ejercito=100;
+    int Recursos=100;
+    int Dinero=50;
     /**
      * Creates new form menu
      */
     public menu() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -26,6 +31,13 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jProgressPueblo = new javax.swing.JProgressBar();
+        jProgressDinero = new javax.swing.JProgressBar();
+        jProgressEjercito = new javax.swing.JProgressBar();
+        jProgressRecursos = new javax.swing.JProgressBar();
+        jButtonNO = new javax.swing.JButton();
+        jButtonSI = new javax.swing.JButton();
+        jTextOpciones = new javax.swing.JTextField();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,10 +53,45 @@ public class menu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 130, 40));
+
+        jProgressPueblo.setValue(Pueblo);
+        jProgressPueblo.setOpaque(true);
+        jProgressPueblo.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jProgressPuebloStateChanged(evt);
+            }
+        });
+        getContentPane().add(jProgressPueblo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 70, 150));
+
+        jProgressDinero.setValue(Dinero);
+        jProgressDinero.setOpaque(true);
+        getContentPane().add(jProgressDinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 70, 150));
+
+        jProgressEjercito.setValue(Ejercito);
+        jProgressEjercito.setOpaque(true);
+        getContentPane().add(jProgressEjercito, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 70, 150));
+
+        jProgressRecursos.setValue(Recursos);
+        jProgressRecursos.setOpaque(true);
+        getContentPane().add(jProgressRecursos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 70, 150));
+
+        jButtonNO.setText("DENEGAR");
+        getContentPane().add(jButtonNO, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, -1, -1));
+
+        jButtonSI.setText("ACEPTAR");
+        getContentPane().add(jButtonSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, -1, -1));
+
+        jTextOpciones.setText("jTextField1");
+        jTextOpciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextOpcionesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 280, 120));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaz/brown.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 200));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -52,6 +99,15 @@ public class menu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jProgressPuebloStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jProgressPuebloStateChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jProgressPuebloStateChanged
+
+    private void jTextOpcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextOpcionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextOpcionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,6 +146,13 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonNO;
+    private javax.swing.JButton jButtonSI;
     private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JProgressBar jProgressDinero;
+    private javax.swing.JProgressBar jProgressEjercito;
+    private javax.swing.JProgressBar jProgressPueblo;
+    private javax.swing.JProgressBar jProgressRecursos;
+    private javax.swing.JTextField jTextOpciones;
     // End of variables declaration//GEN-END:variables
 }
