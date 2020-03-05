@@ -1,4 +1,4 @@
- (32 sloc)  908 Bytes
+
   
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -28,12 +28,13 @@ public class ProgPreject {
         obx.toString();*/
        
        metodos obj = new metodos();
-       obj.toString();
+       opciones var = new opciones();
+       /*obj.toString();
        obj.invertirMateriales();
        obj.toString();
        obj.recaudarImpuestos();
-       obj.toString();
-       
+       obj.toString();*/
+       var.representar();
     }
     
 }

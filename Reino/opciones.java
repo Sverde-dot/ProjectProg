@@ -5,20 +5,31 @@
  */
 package Reino;
 import java.lang.Math; 
+import Reino.metodos.*;
 /**
  *
  * @author Yo
  */
 public class opciones {
 
-   public void option(int[] box){
+    private int Aleatorio;
     
-    int boxCount[] = new int[10];
-    for(int i=0; i < boxCount.length; i++)
-    {
-        //("Random Number ["+ (i+1) + "] : " + (int)(Math.random()*6));
-        boxCount[i]  =  (int) (Math.random()*6) + 1;
+    Reino.metodos met = new Reino.metodos();
+    
+    
+    public metodos representar(){
+        int Aleatorio = (int) (Math.random()*2+1);
+        switch(Aleatorio) {
+            case 1:
+                met.invertirMateriales();
+            break;
+            case 2:
+                met.recaudarImpuestos();
+            break;
+
+        }     
+        return met;
     }
 }
 
-}
+
