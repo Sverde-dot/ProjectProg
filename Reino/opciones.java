@@ -6,6 +6,8 @@
 package Reino;
 import java.lang.Math; 
 import Reino.metodos.*;
+import Interfaz.menu;
+
 /**
  *
  * @author Yo
@@ -13,22 +15,45 @@ import Reino.metodos.*;
 public class opciones {
 
     private int Aleatorio;
+    public String bot1;
     
     Reino.metodos met = new Reino.metodos();
+    Reino.valores var = new Reino.valores();
     
-    
-    public metodos representar(){
+    public String representar(){
         int Aleatorio = (int) (Math.random()*2+1);
+        int caso = 0;
+        String texto = null;
         switch(Aleatorio) {
             case 1:
-                met.invertirMateriales();
+                texto="Nuestros recursos son escasos que hacemos";
+                    
+                            var.Pueblo = var.Pueblo -10;        
+                            var.Recursos = var.Recursos + 10;
+                    
+                    break;
+                    case 2:
+                            var.Pueblo = var.Pueblo -10;        
+                            var.Recursos = var.Recursos - 10;
+                    break;
+                }
             break;
             case 2:
-                met.recaudarImpuestos();
+                texto="Nuestro ejercito es debil que hacemos";
+                switch(caso){
+                    case 1:
+                            var.Pueblo = var.Pueblo -10;        
+                            var.Ejercito = var.Ejercito + 10;
+                    break;
+                    case 2:
+                            var.Pueblo = var.Pueblo +15;        
+                            var.Ejercito = var.Ejercito-5;
+                    break;
+                }
             break;
 
         }     
-        return met;
+        return texto;
     }
 }
 
