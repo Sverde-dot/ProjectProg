@@ -24,6 +24,7 @@ public class valores {
 
     public int getRecursos() {
         return Recursos;
+        
     }
 
     public int getDinero() {
@@ -52,9 +53,31 @@ public class valores {
 
     @Override
     public String toString() {
-        System.out.println("Mi lord el reino esta de esta manera " + " Pueblo= " + Pueblo + " Recursos= " + Recursos + " Dinero= " + Dinero + " Ejercito= " + Ejercito);
+        System.out.println("Mi lord el reino esta de esta manera " +
+                " Pueblo= " + Pueblo 
+                + " Recursos= " + Recursos  
+                +" Dinero= " + Dinero 
+                + " Ejercito= " + Ejercito);
         return null;
     }
-    
-       
+    /*
+    public void Fin (){
+        if(Pueblo == 0) {
+            System.out.println("Mi lord el pueblo esta prosperando demasiado la opinion publica ya no le necesita");
+            System.exit(0);
+        } 
+        if(Dinero == 0) {
+            System.out.println("Mi lord las arcas del reino estan vacias a este paso no sobreviviremos");
+            System.exit(0);
+        } 
+        if(Ejercito == 0) {
+            System.out.println("Mi señor ya no tenemos ejercito y nuestros enemigos estan a las puertas del castillo que hacemos");
+            System.exit(0);
+        } 
+        if(Recursos == 0) {
+            System.out.println("Mi lord el pueblo se muere de hambre");
+            System.exit(0);
+        }            
+    }
+    */   
 }
